@@ -1,2 +1,0 @@
-# spam-detector
-Spam Detector is an interactive web application built with Streamlit that classifies messages as spam or not spam. It uses a trained machine learning model with Python libraries like scikit-learn and Pandas. Perfect for demonstrating practical ML deployment skills online.
