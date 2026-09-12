@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam & Fraud Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="glass-card">
+        <div class="header">
+            <span class="badge">AI/ML Powered</span>
+            <h1>Spam & Fraud Detector</h1>
+            <p>Analyze incoming text messages using Natural Language Processing.</p>
+        </div>
+
+        <!-- Sample Presets for Quick Testing -->
+        <div class="sample-section">
+            <span class="sample-label">Try a sample:</span>
+            <div class="sample-buttons">
+                <button type="button" class="chip-btn" onclick="setSample('spam')">🚨 Spam Sample</button>
+                <button type="button" class="chip-btn" onclick="setSample('ham')">✅ Safe Sample</button>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label for="messageInput">Enter SMS or Email Message:</label>
+            <textarea id="messageInput" placeholder="e.g., Urgent! Your account security is compromised. Verify now..."></textarea>
+            <button id="analyzeBtn" onclick="analyzeMessage()">
+                <span id="btnText">Analyze Text</span>
+                <div id="loader" class="spinner hidden"></div>
+            </button>
+        </div>
+
+        <!-- Prediction Result Container -->
+        <div id="resultCard" class="result-card hidden">
+            <div id="resultBadge" class="status-badge"></div>
+            <h2 id="resultTitle">--</h2>
+            <p id="resultConfidence"></p>
+            
+            <!-- Visual Confidence Bar -->
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
